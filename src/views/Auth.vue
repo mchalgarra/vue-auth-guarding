@@ -59,8 +59,16 @@ export default {
 
       console.log(this.$store.state.user)
 
-      this.$router.push("/")
+      if (this.$route.query.path) {
+        this.$router.push("/" + this.$route.query.path)
+      } else {
+        this.$router.push("/")
+      }
     },
+  },
+
+  mounted() {
+    console.log(this.$route)
   },
 }
 </script>
