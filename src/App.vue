@@ -44,10 +44,6 @@
 export default {
   name: "App",
 
-  data: () => ({
-    //
-  }),
-
   computed: {
     authenticated() {
       return this.$store.getters.authenticated
