@@ -1,35 +1,36 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+      <v-btn text to="/">
+        <v-icon>mdi-home</v-icon>
+        <span class="ml-2">Home</span>
+      </v-btn>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+      <v-btn text to="/admin">
+        <v-icon>mdi-shield-account</v-icon>
+        <span class="ml-2">Admin</span>
+      </v-btn>
+
+      <v-btn text to="/dashboard">
+        <v-icon>mdi-view-dashboard</v-icon>
+        <span class="ml-2">Dashboard</span>
+      </v-btn>
+
+      <v-btn text to="/profile">
+        <v-icon>mdi-account</v-icon>
+        <span class="ml-2">Profile</span>
+      </v-btn>
+
+      <v-btn text to="/about">
+        <v-icon>mdi-information</v-icon>
+        <span class="ml-2">About</span>
+      </v-btn>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn text to="/auth">
+        <span class="mr-2">Sign In</span>
+        <v-icon>mdi-login</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -46,5 +47,5 @@ export default {
   data: () => ({
     //
   }),
-};
+}
 </script>
