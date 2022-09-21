@@ -16,11 +16,6 @@ const routes = [
     component: () => import("../views/Admin.vue"),
   },
   {
-    path: "/dashboard",
-    name: "dashboard",
-    component: () => import("../views/Dashboard.vue"),
-  },
-  {
     path: "/profile",
     name: "profile",
     component: () => import("../views/Profile.vue"),

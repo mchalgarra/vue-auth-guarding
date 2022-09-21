@@ -28,9 +28,9 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn text to="/auth">
-        <span class="mr-2">Sign In</span>
-        <v-icon>mdi-login</v-icon>
+      <v-btn text @click="auth()">
+        <span class="mr-2">Sign {{ authenticated ? "Out" : "In" }}</span>
+        <v-icon>{{ authenticated ? "mdi-logout" : "mdi-login" }}</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -47,5 +47,21 @@ export default {
   data: () => ({
     //
   }),
+
+  computed: {
+    authenticated() {
+      return this.$store.getters.authenticated
+    },
+  },
+
+  methods: {
+    auth() {
+      if (this.authenticated) {
+        return this.$store.dispatch("signOut")
+      }
+
+      this.$router.push("/auth")
+    },
+  },
 }
 </script>
